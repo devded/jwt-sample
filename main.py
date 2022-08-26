@@ -42,8 +42,7 @@ class SignUp:
         "expired_at": self.expired_at
       }
     key = "secret"
-    encoded_jwt = jwt.encode(data, key , algorithm="HS256")
-    return encoded_jwt
+    return jwt.encode(data, key , algorithm="HS256")
 
   def _generate_expired_at(self):
     self.expired_at = int(time.time())
